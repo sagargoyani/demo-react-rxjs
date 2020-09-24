@@ -17,15 +17,12 @@ class App extends React.Component {
 
   componentDidMount() {
     this.temperature = observableService.temperature.subscribe((x, y) => {
-      console.log("1", x);
       this.setState({ temperature: x });
     });
     this.airPressure = observableService.airPressure.subscribe((x, y) => {
-      console.log("1", x);
       this.setState({ airPressure: x });
     });
     this.humidity = observableService.humidity.subscribe((x, y) => {
-      console.log("1", x);
       this.setState({ humidity: x });
     });
   }
